@@ -1,3 +1,4 @@
+import java.util.Objects;
 public class Targa {
     private String numero;
     public String getNumero() {
@@ -15,9 +16,10 @@ public class Targa {
         Targa targa=(Targa)obj;
         return numero.equals(targa.numero);
     }
-    //public int hashCode(){
+    public int hashCode() {
+        return Objects.hashCode(numero);
+    }
 
-    //}
     public String toString(){
         return "Numero di targa: "+numero;
     }
